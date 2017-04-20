@@ -1,0 +1,214 @@
+20
+  on/off
+1 78/39
+2 30/15
+3 13/6
+4 91/45
+5 1/0
+6 90/45
+7 92/46
+8 34/17
+9 63/31
+10 49/24
+11 49/24
+12 10/5
+13 7/3
+14 13/6
+15 6/3
+16 69/34
+17 42/21
+18 62/31
+19 71/35
+20 85/42
+
+NODES:  6 1 3 5 17 Tot wt.
+        1 2 2 2 2 179
+        1 2 2 1 2 178
+        1 2 1 2 2 172
+        1 2 2 2 1 158
+        1 1 2 2 2 140
+        1 2 1 1 2 171
+        1 2 2 1 1 157
+        1 2 1 2 1 151
+        1 1 2 1 2 139
+        1 1 1 2 2 133
+        1 1 2 2 1 119
+        2 1 1 1 1 156
+        1 2 1 1 1 150
+        1 1 1 1 2 132
+        1 1 2 1 1 118
+        1 1 1 2 1 112
+        1 1 1 1 1 111
+Choosing the most effective case -         1 2 2 2 2 179
+
+
+NODES:  1 5 6 8 16 Tot wt.
+        1 2 1 2 2 188
+        1 1 1 2 2 187
+        1 2 1 1 2 171
+        1 2 1 2 1 153
+        2 1 1 1 1 174
+        1 1 1 1 2 170
+        1 1 1 2 1 152
+        1 2 1 1 1 136
+        1 1 1 1 1 135
+Choosing the most effective case -         1 2 1 2 2 188
+
+
+NODES:  9 7 8 10 15 Tot wt.
+        1 2 2 2 2 212
+        1 2 2 2 1 209
+        1 2 1 2 2 195
+        1 2 2 1 2 187
+        1 1 2 2 2 166
+        1 2 1 2 1 192
+        1 2 2 1 1 184
+        1 2 1 1 2 170
+        1 1 2 2 1 163
+        1 1 1 2 2 149
+        1 1 2 1 2 141
+        1 2 1 1 1 167
+        2 1 1 1 1 153
+        1 1 1 2 1 146
+        1 1 2 1 1 138
+        1 1 1 1 2 124
+        1 1 1 1 1 121
+Choosing the most effective case -         1 2 2 2 2 212
+
+
+NODES:  10 2 7 9 20 Tot wt.
+        1 2 2 1 2 262
+        1 1 2 1 2 247
+        1 2 2 1 1 219
+        1 2 1 1 2 216
+        1 1 2 1 1 204
+        1 1 1 1 2 201
+        2 1 1 1 1 183
+        1 2 1 1 1 173
+        1 1 1 1 1 158
+Choosing the most effective case -         1 2 2 1 2 262
+
+
+NODES:  17 2 6 12 19 Tot wt.
+        1 2 1 2 2 177
+        1 2 1 1 2 172
+        1 1 1 2 2 162
+        1 2 1 2 1 141
+        1 1 1 1 2 157
+        2 1 1 1 1 142
+        1 2 1 1 1 136
+        1 1 1 2 1 126
+        1 1 1 1 1 121
+Choosing the most effective case -         1 2 1 2 2 177
+
+
+NODES:  8 1 2 9 15 Tot wt.
+        1 1 2 1 2 123
+        2 1 1 1 1 122
+        1 1 2 1 1 120
+        1 1 1 1 2 108
+        1 1 1 1 1 105
+Choosing the most effective case -         1 1 2 1 2 123
+
+
+NODES:  2 8 10 17 19 Tot wt.
+        1 1 1 1 2 148
+        2 1 1 1 1 127
+        1 1 1 1 1 112
+Choosing the most effective case -         1 1 1 1 2 148
+
+
+NODES:  5 1 4 6 15 Tot wt.
+        1 1 2 1 2 181
+        1 1 2 1 1 178
+        1 1 1 1 2 135
+        2 1 1 1 1 133
+        1 1 1 1 1 132
+Choosing the most effective case -         1 1 2 1 2 181
+
+
+NODES:  7 4 9 10 Tot wt.
+        2 1 1 1 192
+        1 2 1 1 192
+        1 1 1 1 146
+Choosing the most effective case -         2 1 1 1 192
+
+
+NODES:  4 3 5 7 Tot wt.
+        1 2 1 2 150
+        2 1 1 1 143
+        1 1 1 2 143
+        1 2 1 1 104
+        1 1 1 1 97
+Choosing the most effective case -         1 2 1 2 150
+
+
+NODES:  20 3 10 16 Tot wt.
+        1 2 1 2 148
+        2 1 1 1 149
+        1 1 1 2 141
+        1 2 1 1 113
+        1 1 1 1 106
+Choosing the most effective case -         1 2 1 2 148
+
+
+NODES:  19 2 14 17 Tot wt.
+        2 1 1 1 113
+        1 1 2 1 84
+        1 1 1 1 77
+Choosing the most effective case -         2 1 1 1 113
+
+
+NODES:  11 12 13 18 Tot wt.
+        1 2 2 2 103
+        1 2 1 2 99
+        1 1 2 2 98
+        1 2 2 1 72
+        1 1 1 2 94
+        2 1 1 1 88
+        1 2 1 1 68
+        1 1 2 1 67
+        1 1 1 1 63
+Choosing the most effective case -         1 2 2 2 103
+
+
+NODES:  3 4 6 20 Tot wt.
+        2 1 1 1 145
+        1 1 1 1 138
+Choosing the most effective case -         2 1 1 1 145
+
+
+NODES:  12 11 14 17 Tot wt.
+        2 1 1 1 61
+        1 1 1 1 56
+Choosing the most effective case -         2 1 1 1 61
+
+
+NODES:  15 5 8 9 Tot wt.
+        2 1 1 1 54
+        1 1 1 1 51
+Choosing the most effective case -         2 1 1 1 54
+
+
+NODES:  16 1 20 Tot wt.
+        2 1 1 150
+        1 1 1 115
+Choosing the most effective case -         2 1 1 150
+
+
+NODES:  14 12 19 Tot wt.
+        1 2 2 87
+        1 1 2 82
+        2 1 1 53
+        1 2 1 51
+        1 1 1 46
+Choosing the most effective case -         1 2 2 87
+
+The final active nodes are - 
+No. of nodes - 8
+
+3 7 12 13 15 16 18 19 
+end
+8
+955
+330
