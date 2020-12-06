@@ -1,0 +1,48 @@
+Greedy Algorithm Results ->
+
+No of active nodes = 8
+Total Resources in the network = 955
+Total resources on active nodes = 451
+Total unused resources  = 504
+
+
+Max-Sum Algorithm Output ->
+
+Total no of Active nodes - 9
+Total resources at all the nodes = 955
+Total resources on active nodes = 455
+Total unused resources = 500
+
+
+New Algorithm Output ->
+
+Total no of Active nodes - 8
+Total resources at all the nodes = 955
+Total resources on active nodes = 330
+Total unused resources = 625
+
+Max Sum message passing - 
+
+Total Message passed through all nodes - 6844
+Max message transfer by a single node - 588
+
+Our Algorithm message passing - 
+
+Total Message passed through all nodes - 138
+Max message transfer by a single node - 8
+
+
+Max-Sum Algorithm Output ->
+
+Total no of Active nodes - 9
+Total resources at all the nodes = 955
+Total resources on active nodes = 455
+Total unused resources = 500
+
+
+Max-Sum Algorithm Output ->
+
+Total no of Active nodes - 9
+Total resources at all the nodes = 955
+Total resources on active nodes = 455
+Total unused resources = 500

@@ -1,0 +1,115 @@
+graph {
+	subgraph cluster_agentA1 {
+		label = A1;
+		A1 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA2 {
+		label = A2;
+		A2 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA3 {
+		label = A3;
+		A3 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA4 {
+		label = A4;
+		A4 [style = "filled" fontcolor = black fillcolor = green1 shape = doublecircle];
+	}
+	subgraph cluster_agentA5 {
+		label = A5;
+		A5 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA6 {
+		label = A6;
+		A6 [style = "filled" fontcolor = black fillcolor = orangered shape = doubleoctagon];
+	}
+	subgraph cluster_agentA7 {
+		label = A7;
+		A7 [style = "filled" fontcolor = black fillcolor = dodgerblue shape = doublebox];
+	}
+	subgraph cluster_agentA8 {
+		label = A8;
+		A8 [style = "filled" fontcolor = black fillcolor = dodgerblue shape = doublebox];
+	}
+	subgraph cluster_agentA9 {
+		label = A9;
+		A9 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA10 {
+		label = A10;
+		A10 [style = "filled" fontcolor = black fillcolor = green1 shape = doublecircle];
+	}
+	subgraph cluster_agentA11 {
+		label = A11;
+		A11 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA12 {
+		label = A12;
+		A12 [style = "filled" fontcolor = black fillcolor = orangered shape = doubleoctagon];
+	}
+	subgraph cluster_agentA13 {
+		label = A13;
+		A13 [style = "filled" fontcolor = black fillcolor = orangered shape = doubleoctagon];
+	}
+	subgraph cluster_agentA14 {
+		label = A14;
+		A14 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA15 {
+		label = A15;
+		A15 [style = "filled" fontcolor = black fillcolor = green1 shape = doublecircle];
+	}
+	subgraph cluster_agentA16 {
+		label = A16;
+		A16 [style = "filled" fontcolor = black fillcolor = green1 shape = doublecircle];
+	}
+	subgraph cluster_agentA17 {
+		label = A17;
+		A17 [style = "filled" fontcolor = black fillcolor = grey83 shape = circle];
+	}
+	subgraph cluster_agentA18 {
+		label = A18;
+		A18 [style = "filled" fontcolor = black fillcolor = orangered shape = doubleoctagon];
+	}
+	subgraph cluster_agentA19 {
+		label = A19;
+		A19 [style = "filled" fontcolor = black fillcolor = orangered shape = doubleoctagon];
+	}
+	subgraph cluster_agentA20 {
+		label = A20;
+		A20 [style = "filled" fontcolor = black fillcolor = dodgerblue shape = doublebox];
+	}
+
+
+	A1 -- A5;
+	A1 -- A6;
+	A1 -- A8;
+	A1 -- A16;
+	A2 -- A8;
+	A2 -- A10;
+	A2 -- A17;
+	A2 -- A19;
+	A3 -- A4;
+	A3 -- A6;
+	A3 -- A20;
+	A4 -- A5;
+	A4 -- A7;
+	A5 -- A6;
+	A5 -- A15;
+	A6 -- A17;
+	A7 -- A9;
+	A7 -- A10;
+	A8 -- A9;
+	A8 -- A15;
+	A9 -- A10;
+	A9 -- A15;
+	A10 -- A20;
+	A11 -- A12;
+	A11 -- A13;
+	A11 -- A18;
+	A12 -- A14;
+	A12 -- A17;
+	A14 -- A19;
+	A16 -- A20;
+	A17 -- A19;
+}

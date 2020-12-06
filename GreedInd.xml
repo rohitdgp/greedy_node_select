@@ -1,0 +1,193 @@
+<instance>
+<presentation name="sampleProblem" maxConstraintArity="6"
+maximize="true" format="XCSP 2.1_FRODO" />
+
+<agents nbAgents="20">
+<agent name="agentA1" />
+<agent name="agentA2" />
+<agent name="agentA3" />
+<agent name="agentA4" />
+<agent name="agentA5" />
+<agent name="agentA6" />
+<agent name="agentA7" />
+<agent name="agentA8" />
+<agent name="agentA9" />
+<agent name="agentA10" />
+<agent name="agentA11" />
+<agent name="agentA12" />
+<agent name="agentA13" />
+<agent name="agentA14" />
+<agent name="agentA15" />
+<agent name="agentA16" />
+<agent name="agentA17" />
+<agent name="agentA18" />
+<agent name="agentA19" />
+<agent name="agentA20" />
+</agents>
+<domains nbDomains="1">
+<domain name="two_colors" nbValues="2">1..2</domain>
+</domains>
+
+<variables nbVariables="20">
+<variable name="A1" domain="two_colors" agent="agentA1" />
+<variable name="A2" domain="two_colors" agent="agentA2" />
+<variable name="A3" domain="two_colors" agent="agentA3" />
+<variable name="A4" domain="two_colors" agent="agentA4" />
+<variable name="A5" domain="two_colors" agent="agentA5" />
+<variable name="A6" domain="two_colors" agent="agentA6" />
+<variable name="A7" domain="two_colors" agent="agentA7" />
+<variable name="A8" domain="two_colors" agent="agentA8" />
+<variable name="A9" domain="two_colors" agent="agentA9" />
+<variable name="A10" domain="two_colors" agent="agentA10" />
+<variable name="A11" domain="two_colors" agent="agentA11" />
+<variable name="A12" domain="two_colors" agent="agentA12" />
+<variable name="A13" domain="two_colors" agent="agentA13" />
+<variable name="A14" domain="two_colors" agent="agentA14" />
+<variable name="A15" domain="two_colors" agent="agentA15" />
+<variable name="A16" domain="two_colors" agent="agentA16" />
+<variable name="A17" domain="two_colors" agent="agentA17" />
+<variable name="A18" domain="two_colors" agent="agentA18" />
+<variable name="A19" domain="two_colors" agent="agentA19" />
+<variable name="A20" domain="two_colors" agent="agentA20" />
+</variables>
+
+<relations nbRelations="21">
+<relation name="NEQ" arity="2" nbTuples="1" semantics="soft" defaultCost="0">
+-999: 2 2
+</relation>
+<relation name="R1" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+39:1|
+78:2
+</relation>
+<relation name="R2" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+15:1|
+30:2
+</relation>
+<relation name="R3" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+6:1|
+13:2
+</relation>
+<relation name="R4" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+45:1|
+91:2
+</relation>
+<relation name="R5" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+0:1|
+1:2
+</relation>
+<relation name="R6" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+45:1|
+90:2
+</relation>
+<relation name="R7" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+46:1|
+92:2
+</relation>
+<relation name="R8" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+17:1|
+34:2
+</relation>
+<relation name="R9" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+31:1|
+63:2
+</relation>
+<relation name="R10" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+24:1|
+49:2
+</relation>
+<relation name="R11" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+24:1|
+49:2
+</relation>
+<relation name="R12" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+5:1|
+10:2
+</relation>
+<relation name="R13" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+3:1|
+7:2
+</relation>
+<relation name="R14" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+6:1|
+13:2
+</relation>
+<relation name="R15" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+3:1|
+6:2
+</relation>
+<relation name="R16" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+34:1|
+69:2
+</relation>
+<relation name="R17" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+21:1|
+42:2
+</relation>
+<relation name="R18" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+31:1|
+62:2
+</relation>
+<relation name="R19" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+35:1|
+71:2
+</relation>
+<relation name="R20" arity="1" nbTuples="2" semantics="soft" defaultCost="0">
+42:1|
+85:2
+</relation>
+</relations>
+
+<constraints nbConstraints="51">
+<constraint name="A1_and_A5_have_different_colors" arity="2" scope="A1 A5" reference="NEQ" />
+<constraint name="A1_and_A6_have_different_colors" arity="2" scope="A1 A6" reference="NEQ" />
+<constraint name="A1_and_A8_have_different_colors" arity="2" scope="A1 A8" reference="NEQ" />
+<constraint name="A1_and_A16_have_different_colors" arity="2" scope="A1 A16" reference="NEQ" />
+<constraint name="A2_and_A8_have_different_colors" arity="2" scope="A2 A8" reference="NEQ" />
+<constraint name="A2_and_A10_have_different_colors" arity="2" scope="A2 A10" reference="NEQ" />
+<constraint name="A2_and_A17_have_different_colors" arity="2" scope="A2 A17" reference="NEQ" />
+<constraint name="A2_and_A19_have_different_colors" arity="2" scope="A2 A19" reference="NEQ" />
+<constraint name="A3_and_A4_have_different_colors" arity="2" scope="A3 A4" reference="NEQ" />
+<constraint name="A3_and_A6_have_different_colors" arity="2" scope="A3 A6" reference="NEQ" />
+<constraint name="A3_and_A20_have_different_colors" arity="2" scope="A3 A20" reference="NEQ" />
+<constraint name="A4_and_A5_have_different_colors" arity="2" scope="A4 A5" reference="NEQ" />
+<constraint name="A4_and_A7_have_different_colors" arity="2" scope="A4 A7" reference="NEQ" />
+<constraint name="A5_and_A6_have_different_colors" arity="2" scope="A5 A6" reference="NEQ" />
+<constraint name="A5_and_A15_have_different_colors" arity="2" scope="A5 A15" reference="NEQ" />
+<constraint name="A6_and_A17_have_different_colors" arity="2" scope="A6 A17" reference="NEQ" />
+<constraint name="A7_and_A9_have_different_colors" arity="2" scope="A7 A9" reference="NEQ" />
+<constraint name="A7_and_A10_have_different_colors" arity="2" scope="A7 A10" reference="NEQ" />
+<constraint name="A8_and_A9_have_different_colors" arity="2" scope="A8 A9" reference="NEQ" />
+<constraint name="A8_and_A15_have_different_colors" arity="2" scope="A8 A15" reference="NEQ" />
+<constraint name="A9_and_A10_have_different_colors" arity="2" scope="A9 A10" reference="NEQ" />
+<constraint name="A9_and_A15_have_different_colors" arity="2" scope="A9 A15" reference="NEQ" />
+<constraint name="A10_and_A20_have_different_colors" arity="2" scope="A10 A20" reference="NEQ" />
+<constraint name="A11_and_A12_have_different_colors" arity="2" scope="A11 A12" reference="NEQ" />
+<constraint name="A11_and_A13_have_different_colors" arity="2" scope="A11 A13" reference="NEQ" />
+<constraint name="A11_and_A18_have_different_colors" arity="2" scope="A11 A18" reference="NEQ" />
+<constraint name="A12_and_A14_have_different_colors" arity="2" scope="A12 A14" reference="NEQ" />
+<constraint name="A12_and_A17_have_different_colors" arity="2" scope="A12 A17" reference="NEQ" />
+<constraint name="A14_and_A19_have_different_colors" arity="2" scope="A14 A19" reference="NEQ" />
+<constraint name="A16_and_A20_have_different_colors" arity="2" scope="A16 A20" reference="NEQ" />
+<constraint name="A17_and_A19_have_different_colors" arity="2" scope="A17 A19" reference="NEQ" />
+<constraint name="A1_prob" arity="1" scope="A1" reference="R1" />
+<constraint name="A2_prob" arity="1" scope="A2" reference="R2" />
+<constraint name="A3_prob" arity="1" scope="A3" reference="R3" />
+<constraint name="A4_prob" arity="1" scope="A4" reference="R4" />
+<constraint name="A5_prob" arity="1" scope="A5" reference="R5" />
+<constraint name="A6_prob" arity="1" scope="A6" reference="R6" />
+<constraint name="A7_prob" arity="1" scope="A7" reference="R7" />
+<constraint name="A8_prob" arity="1" scope="A8" reference="R8" />
+<constraint name="A9_prob" arity="1" scope="A9" reference="R9" />
+<constraint name="A10_prob" arity="1" scope="A10" reference="R10" />
+<constraint name="A11_prob" arity="1" scope="A11" reference="R11" />
+<constraint name="A12_prob" arity="1" scope="A12" reference="R12" />
+<constraint name="A13_prob" arity="1" scope="A13" reference="R13" />
+<constraint name="A14_prob" arity="1" scope="A14" reference="R14" />
+<constraint name="A15_prob" arity="1" scope="A15" reference="R15" />
+<constraint name="A16_prob" arity="1" scope="A16" reference="R16" />
+<constraint name="A17_prob" arity="1" scope="A17" reference="R17" />
+<constraint name="A18_prob" arity="1" scope="A18" reference="R18" />
+<constraint name="A19_prob" arity="1" scope="A19" reference="R19" />
+<constraint name="A20_prob" arity="1" scope="A20" reference="R20" />
+</constraints>
+</instance>

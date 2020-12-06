@@ -1,0 +1,1773 @@
+FRODO  Copyright (C) 2008-2016  Thomas Leaute, Brammert Ottens & Radoslaw Szymanek
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under certain conditions. Use the option -license to display the license.
+
+Parsing the input problem file GreedInd.xml
+Parsing the input agent configuration file frodo2/agents/MaxSum/MaxSumAgent.xml
+Setting up the agents...
+Constraint graph:
+graph {
+	node [shape = "circle"];
+	subgraph cluster_agentA10 {
+		label = agentA10;
+		A10 [style="filled"];
+	}
+	subgraph cluster_agentA20 {
+		label = agentA20;
+		A20 [style="filled"];
+	}
+	subgraph cluster_agentA12 {
+		label = agentA12;
+		A12 [style="filled"];
+	}
+	subgraph cluster_agentA11 {
+		label = agentA11;
+		A11 [style="filled"];
+	}
+	subgraph cluster_agentA14 {
+		label = agentA14;
+		A14 [style="filled"];
+	}
+	subgraph cluster_agentA13 {
+		label = agentA13;
+		A13 [style="filled"];
+	}
+	subgraph cluster_agentA16 {
+		label = agentA16;
+		A16 [style="filled"];
+	}
+	subgraph cluster_agentA15 {
+		label = agentA15;
+		A15 [style="filled"];
+	}
+	subgraph cluster_agentA18 {
+		label = agentA18;
+		A18 [style="filled"];
+	}
+	subgraph cluster_agentA17 {
+		label = agentA17;
+		A17 [style="filled"];
+	}
+	subgraph cluster_agentA2 {
+		label = agentA2;
+		A2 [style="filled"];
+	}
+	subgraph cluster_agentA3 {
+		label = agentA3;
+		A3 [style="filled"];
+	}
+	subgraph cluster_agentA19 {
+		label = agentA19;
+		A19 [style="filled"];
+	}
+	subgraph cluster_agentA1 {
+		label = agentA1;
+		A1 [style="filled"];
+	}
+	subgraph cluster_agentA6 {
+		label = agentA6;
+		A6 [style="filled"];
+	}
+	subgraph cluster_agentA7 {
+		label = agentA7;
+		A7 [style="filled"];
+	}
+	subgraph cluster_agentA4 {
+		label = agentA4;
+		A4 [style="filled"];
+	}
+	subgraph cluster_agentA5 {
+		label = agentA5;
+		A5 [style="filled"];
+	}
+	subgraph cluster_agentA8 {
+		label = agentA8;
+		A8 [style="filled"];
+	}
+	subgraph cluster_agentA9 {
+		label = agentA9;
+		A9 [style="filled"];
+	}
+
+
+	A12 -- A11;
+	A13 -- A11;
+	A14 -- A12;
+	A16 -- A1;
+	A17 -- A12;
+	A18 -- A11;
+	A19 -- A14;
+	A19 -- A17;
+	A2 -- A10;
+	A2 -- A17;
+	A2 -- A19;
+	A3 -- A20;
+	A4 -- A3;
+	A5 -- A1;
+	A5 -- A4;
+	A5 -- A15;
+	A6 -- A1;
+	A6 -- A3;
+	A6 -- A5;
+	A6 -- A17;
+	A7 -- A10;
+	A7 -- A4;
+	A8 -- A1;
+	A8 -- A2;
+	A8 -- A15;
+	A9 -- A10;
+	A9 -- A15;
+	A9 -- A7;
+	A9 -- A8;
+	A20 -- A10;
+	A20 -- A16;
+}
+
+Factor graph:
+strict graph {
+	subgraph cluster_agentA10 {
+		label = agentA10;
+		A10 [shape = "circle"];
+
+		A10_and_A20_have_different_colors [shape = "square"];
+		A10_prob [shape = "square"];
+	}
+	subgraph cluster_agentA20 {
+		label = agentA20;
+		A20 [shape = "circle"];
+
+		A20_prob [shape = "square"];
+	}
+	subgraph cluster_agentA12 {
+		label = agentA12;
+		A12 [shape = "circle"];
+
+		A12_and_A14_have_different_colors [shape = "square"];
+		A12_and_A17_have_different_colors [shape = "square"];
+		A12_prob [shape = "square"];
+	}
+	subgraph cluster_agentA11 {
+		label = agentA11;
+		A11 [shape = "circle"];
+
+		A11_and_A12_have_different_colors [shape = "square"];
+		A11_and_A13_have_different_colors [shape = "square"];
+		A11_and_A18_have_different_colors [shape = "square"];
+		A11_prob [shape = "square"];
+	}
+	subgraph cluster_agentA14 {
+		label = agentA14;
+		A14 [shape = "circle"];
+
+		A14_and_A19_have_different_colors [shape = "square"];
+		A14_prob [shape = "square"];
+	}
+	subgraph cluster_agentA13 {
+		label = agentA13;
+		A13 [shape = "circle"];
+
+		A13_prob [shape = "square"];
+	}
+	subgraph cluster_agentA16 {
+		label = agentA16;
+		A16 [shape = "circle"];
+
+		A16_and_A20_have_different_colors [shape = "square"];
+		A16_prob [shape = "square"];
+	}
+	subgraph cluster_agentA15 {
+		label = agentA15;
+		A15 [shape = "circle"];
+
+		A15_prob [shape = "square"];
+	}
+	subgraph cluster_agentA18 {
+		label = agentA18;
+		A18 [shape = "circle"];
+
+		A18_prob [shape = "square"];
+	}
+	subgraph cluster_agentA17 {
+		label = agentA17;
+		A17 [shape = "circle"];
+
+		A17_and_A19_have_different_colors [shape = "square"];
+		A17_prob [shape = "square"];
+	}
+	subgraph cluster_agentA2 {
+		label = agentA2;
+		A2 [shape = "circle"];
+
+		A2_and_A8_have_different_colors [shape = "square"];
+		A2_and_A10_have_different_colors [shape = "square"];
+		A2_and_A17_have_different_colors [shape = "square"];
+		A2_and_A19_have_different_colors [shape = "square"];
+		A2_prob [shape = "square"];
+	}
+	subgraph cluster_agentA3 {
+		label = agentA3;
+		A3 [shape = "circle"];
+
+		A3_and_A4_have_different_colors [shape = "square"];
+		A3_and_A6_have_different_colors [shape = "square"];
+		A3_and_A20_have_different_colors [shape = "square"];
+		A3_prob [shape = "square"];
+	}
+	subgraph cluster_agentA19 {
+		label = agentA19;
+		A19 [shape = "circle"];
+
+		A19_prob [shape = "square"];
+	}
+	subgraph cluster_agentA1 {
+		label = agentA1;
+		A1 [shape = "circle"];
+
+		A1_and_A5_have_different_colors [shape = "square"];
+		A1_and_A6_have_different_colors [shape = "square"];
+		A1_and_A8_have_different_colors [shape = "square"];
+		A1_and_A16_have_different_colors [shape = "square"];
+		A1_prob [shape = "square"];
+	}
+	subgraph cluster_agentA6 {
+		label = agentA6;
+		A6 [shape = "circle"];
+
+		A6_and_A17_have_different_colors [shape = "square"];
+		A6_prob [shape = "square"];
+	}
+	subgraph cluster_agentA7 {
+		label = agentA7;
+		A7 [shape = "circle"];
+
+		A7_and_A9_have_different_colors [shape = "square"];
+		A7_and_A10_have_different_colors [shape = "square"];
+		A7_prob [shape = "square"];
+	}
+	subgraph cluster_agentA4 {
+		label = agentA4;
+		A4 [shape = "circle"];
+
+		A4_and_A5_have_different_colors [shape = "square"];
+		A4_and_A7_have_different_colors [shape = "square"];
+		A4_prob [shape = "square"];
+	}
+	subgraph cluster_agentA5 {
+		label = agentA5;
+		A5 [shape = "circle"];
+
+		A5_and_A6_have_different_colors [shape = "square"];
+		A5_and_A15_have_different_colors [shape = "square"];
+		A5_prob [shape = "square"];
+	}
+	subgraph cluster_agentA8 {
+		label = agentA8;
+		A8 [shape = "circle"];
+
+		A8_and_A9_have_different_colors [shape = "square"];
+		A8_and_A15_have_different_colors [shape = "square"];
+		A8_prob [shape = "square"];
+	}
+	subgraph cluster_agentA9 {
+		label = agentA9;
+		A9 [shape = "circle"];
+
+		A9_and_A10_have_different_colors [shape = "square"];
+		A9_and_A15_have_different_colors [shape = "square"];
+		A9_prob [shape = "square"];
+	}
+
+	A1_and_A5_have_different_colors--A1;
+	A1_and_A5_have_different_colors--A5;
+	A1_and_A6_have_different_colors--A1;
+	A1_and_A6_have_different_colors--A6;
+	A1_and_A8_have_different_colors--A1;
+	A1_and_A8_have_different_colors--A8;
+	A1_and_A16_have_different_colors--A1;
+	A1_and_A16_have_different_colors--A16;
+	A2_and_A8_have_different_colors--A2;
+	A2_and_A8_have_different_colors--A8;
+	A2_and_A10_have_different_colors--A2;
+	A2_and_A10_have_different_colors--A10;
+	A2_and_A17_have_different_colors--A2;
+	A2_and_A17_have_different_colors--A17;
+	A2_and_A19_have_different_colors--A2;
+	A2_and_A19_have_different_colors--A19;
+	A3_and_A4_have_different_colors--A3;
+	A3_and_A4_have_different_colors--A4;
+	A3_and_A6_have_different_colors--A3;
+	A3_and_A6_have_different_colors--A6;
+	A3_and_A20_have_different_colors--A3;
+	A3_and_A20_have_different_colors--A20;
+	A4_and_A5_have_different_colors--A4;
+	A4_and_A5_have_different_colors--A5;
+	A4_and_A7_have_different_colors--A4;
+	A4_and_A7_have_different_colors--A7;
+	A5_and_A6_have_different_colors--A5;
+	A5_and_A6_have_different_colors--A6;
+	A5_and_A15_have_different_colors--A5;
+	A5_and_A15_have_different_colors--A15;
+	A6_and_A17_have_different_colors--A6;
+	A6_and_A17_have_different_colors--A17;
+	A7_and_A9_have_different_colors--A7;
+	A7_and_A9_have_different_colors--A9;
+	A7_and_A10_have_different_colors--A7;
+	A7_and_A10_have_different_colors--A10;
+	A8_and_A9_have_different_colors--A8;
+	A8_and_A9_have_different_colors--A9;
+	A8_and_A15_have_different_colors--A8;
+	A8_and_A15_have_different_colors--A15;
+	A9_and_A10_have_different_colors--A9;
+	A9_and_A10_have_different_colors--A10;
+	A9_and_A15_have_different_colors--A9;
+	A9_and_A15_have_different_colors--A15;
+	A10_and_A20_have_different_colors--A10;
+	A10_and_A20_have_different_colors--A20;
+	A11_and_A12_have_different_colors--A11;
+	A11_and_A12_have_different_colors--A12;
+	A11_and_A13_have_different_colors--A11;
+	A11_and_A13_have_different_colors--A13;
+	A11_and_A18_have_different_colors--A11;
+	A11_and_A18_have_different_colors--A18;
+	A12_and_A14_have_different_colors--A12;
+	A12_and_A14_have_different_colors--A14;
+	A12_and_A17_have_different_colors--A12;
+	A12_and_A17_have_different_colors--A17;
+	A14_and_A19_have_different_colors--A14;
+	A14_and_A19_have_different_colors--A19;
+	A16_and_A20_have_different_colors--A16;
+	A16_and_A20_have_different_colors--A20;
+	A17_and_A19_have_different_colors--A17;
+	A17_and_A19_have_different_colors--A19;
+	A1_prob--A1;
+	A2_prob--A2;
+	A3_prob--A3;
+	A4_prob--A4;
+	A5_prob--A5;
+	A6_prob--A6;
+	A7_prob--A7;
+	A8_prob--A8;
+	A9_prob--A9;
+	A10_prob--A10;
+	A11_prob--A11;
+	A12_prob--A12;
+	A13_prob--A13;
+	A14_prob--A14;
+	A15_prob--A15;
+	A16_prob--A16;
+	A17_prob--A17;
+	A18_prob--A18;
+	A19_prob--A19;
+	A20_prob--A20;
+
+}
+
+Starting the algorithm...
+var `A5' = 1
+var `A15' = 2
+var `A9' = 1
+var `A15' = 1
+var `A7' = 1
+var `A15' = 2
+var `A7' = 2
+var `A7' = 1
+var `A15' = 1
+var `A10' = 2
+var `A15' = 2
+var `A15' = 1
+var `A15' = 2
+var `A8' = 1
+var `A6' = 2
+var `A3' = 1
+var `A20' = 1
+var `A4' = 2
+var `A1' = 1
+var `A17' = 1
+var `A19' = 2
+var `A2' = 1
+var `A13' = 2
+var `A18' = 2
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,555
+	VarToFunction:	1,867
+	- Total:	3,422
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	232
+	agentA6:	330
+	agentA7:	185
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	289
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	170
+	agentA16:	164
+	agentA17:	195
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	242
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	134,321
+	VarToFunction:	160,974
+	- Total:	295,295
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	20,244
+	agentA6:	27,989
+	agentA7:	16,051
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,751
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	14,867
+	agentA16:	13,918
+	agentA17:	16,846
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,031
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,557
+	VarToFunction:	1,867
+	- Total:	3,424
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	232
+	agentA6:	330
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	170
+	agentA16:	164
+	agentA17:	195
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	242
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	134,479
+	VarToFunction:	160,974
+	- Total:	295,453
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	20,244
+	agentA6:	27,989
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	14,867
+	agentA16:	13,918
+	agentA17:	16,846
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,031
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,557
+	VarToFunction:	1,867
+	- Total:	3,424
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	232
+	agentA6:	330
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	170
+	agentA16:	164
+	agentA17:	195
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	242
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	134,479
+	VarToFunction:	160,974
+	- Total:	295,453
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	20,244
+	agentA6:	27,989
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	14,867
+	agentA16:	13,918
+	agentA17:	16,846
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,031
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,564
+	VarToFunction:	1,867
+	- Total:	3,431
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	232
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	170
+	agentA16:	164
+	agentA17:	202
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	242
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	135,032
+	VarToFunction:	160,974
+	- Total:	296,006
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	20,244
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	14,867
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,031
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,581
+	VarToFunction:	1,867
+	- Total:	3,448
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	179
+	agentA16:	164
+	agentA17:	202
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	136,375
+	VarToFunction:	160,974
+	- Total:	297,349
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+var `A16' = 2
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,581
+	VarToFunction:	1,867
+	- Total:	3,448
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	219
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	179
+	agentA16:	164
+	agentA17:	202
+	agentA19:	107
+	agentA2:	241
+	agentA20:	123
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	136,375
+	VarToFunction:	160,974
+	- Total:	297,349
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	18,741
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	10,676
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,618
+	VarToFunction:	1,936
+	- Total:	3,554
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	18
+	agentA12:	53
+	agentA14:	59
+	agentA15:	179
+	agentA16:	164
+	agentA17:	202
+	agentA19:	107
+	agentA2:	241
+	agentA20:	160
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	139,778
+	VarToFunction:	166,907
+	- Total:	306,685
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	4,670
+	agentA14:	5,144
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA19:	9,412
+	agentA2:	20,965
+	agentA20:	14,079
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+var `A14' = 1
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,666
+	VarToFunction:	1,983
+	- Total:	3,649
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	18
+	agentA12:	100
+	agentA14:	59
+	agentA15:	179
+	agentA16:	164
+	agentA17:	202
+	agentA19:	155
+	agentA2:	241
+	agentA20:	160
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	144,050
+	VarToFunction:	171,103
+	- Total:	315,153
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	8,866
+	agentA14:	5,144
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,079
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+var `A11' = 1
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,696
+	VarToFunction:	1,983
+	- Total:	3,679
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA11:	30
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	18
+	agentA12:	110
+	agentA13:	10
+	agentA14:	59
+	agentA15:	179
+	agentA16:	164
+	agentA17:	202
+	agentA18:	10
+	agentA19:	155
+	agentA2:	241
+	agentA20:	160
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	147,860
+	VarToFunction:	171,103
+	- Total:	318,963
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA11:	3,810
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	2,388
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	5,144
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	17,399
+	agentA18:	1,270
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,079
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+var `A12' = 2
+Utility of solution found: 702
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,783
+	VarToFunction:	2,060
+	- Total:	3,843
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	155
+	agentA2:	241
+	agentA20:	160
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	155,693
+	VarToFunction:	177,669
+	- Total:	333,362
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,079
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,783
+	VarToFunction:	2,060
+	- Total:	3,843
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	242
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	155
+	agentA2:	241
+	agentA20:	160
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	155,693
+	VarToFunction:	177,669
+	- Total:	333,362
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,044
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,079
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,789
+	VarToFunction:	2,060
+	- Total:	3,849
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	248
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	155
+	agentA2:	241
+	agentA20:	166
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	156,167
+	VarToFunction:	177,669
+	- Total:	333,836
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,518
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,553
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,789
+	VarToFunction:	2,060
+	- Total:	3,849
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	248
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	198
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	155
+	agentA2:	241
+	agentA20:	166
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	156,167
+	VarToFunction:	177,669
+	- Total:	333,836
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,518
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	17,569
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	13,684
+	agentA2:	20,965
+	agentA20:	14,553
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,200
+Number of messages sent (by type): 
+	FunctionToVar:	1,809
+	VarToFunction:	2,060
+	- Total:	3,869
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	248
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	218
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	175
+	agentA2:	241
+	agentA20:	166
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	157,747
+	VarToFunction:	177,669
+	- Total:	335,416
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,518
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	19,149
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	15,264
+	agentA2:	20,965
+	agentA20:	14,553
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
+Algorithm finished in 45 ms (simulated time)
+Number of NCCCs = 5,202
+Number of messages sent (by type): 
+	FunctionToVar:	1,809
+	VarToFunction:	2,060
+	- Total:	3,869
+Number of messages sent (by agent): 
+	agentA1:	318
+	agentA10:	248
+	agentA11:	30
+	agentA12:	164
+	agentA13:	9
+	agentA14:	95
+	agentA15:	255
+	agentA16:	106
+	agentA17:	218
+	agentA18:	9
+	agentA19:	177
+	agentA2:	347
+	agentA20:	264
+	agentA3:	235
+	agentA4:	186
+	agentA5:	249
+	agentA6:	337
+	agentA7:	187
+	agentA8:	233
+	agentA9:	202
+Number of messages received (by agent): 
+	agentA1:	288
+	agentA10:	291
+	agentA11:	95
+	agentA12:	110
+	agentA13:	10
+	agentA14:	107
+	agentA15:	179
+	agentA16:	164
+	agentA17:	241
+	agentA18:	10
+	agentA19:	175
+	agentA2:	241
+	agentA20:	166
+	agentA3:	262
+	agentA4:	197
+	agentA5:	349
+	agentA6:	250
+	agentA7:	174
+	agentA8:	306
+	agentA9:	254
+Amount of information sent (by type, in bytes): 
+	FunctionToVar:	157,747
+	VarToFunction:	177,669
+	- Total:	335,416
+Amount of information sent (by agent, in bytes): 
+	agentA1:	27,032
+	agentA10:	21,518
+	agentA11:	3,810
+	agentA12:	14,399
+	agentA13:	1,194
+	agentA14:	8,468
+	agentA15:	21,591
+	agentA16:	9,336
+	agentA17:	19,149
+	agentA18:	1,194
+	agentA19:	15,431
+	agentA2:	29,327
+	agentA20:	22,304
+	agentA3:	19,998
+	agentA4:	16,128
+	agentA5:	21,587
+	agentA6:	28,542
+	agentA7:	16,209
+	agentA8:	20,323
+	agentA9:	17,876
+Amount of information received (by agent, in bytes): 
+	agentA1:	24,674
+	agentA10:	24,909
+	agentA11:	8,954
+	agentA12:	10,136
+	agentA13:	1,270
+	agentA14:	9,416
+	agentA15:	15,578
+	agentA16:	13,918
+	agentA17:	20,960
+	agentA18:	1,270
+	agentA19:	15,264
+	agentA2:	20,965
+	agentA20:	14,553
+	agentA3:	22,140
+	agentA4:	17,000
+	agentA5:	29,487
+	agentA6:	21,663
+	agentA7:	15,185
+	agentA8:	26,090
+	agentA9:	21,984
+Size of the largest message sent (by type, in bytes): 
+	FunctionToVar:	559
+	VarToFunction:	562
+	- Overall maximum:	562
